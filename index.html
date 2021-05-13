@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherApp - Rob</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> 
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="left-container">
+
+        <div class="form-container">
+            <form id="searchForm">
+                <input type="text" placeholder="Weather in" name="query" id="searchInput">
+            </form>
+    
+        </div>
+        <div class="weather-output">
+            <h2 id="temp"></h2>
+            <h2 id="searchingCity"></h2>
+            <h2 id="skyStatus"></h2>
+        </div>
+
+        <div class="right-container">
+            <h2 id="right-header">Informacje dodatkowe</h2>
+            <div class="more-info-container">
+                <ul></ul>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="./app2.js"></script>
+</body>
+</html>

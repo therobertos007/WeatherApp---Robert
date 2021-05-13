@@ -1,0 +1,38 @@
+OpenWeatherApp API KEY = 3861eeae573a8188b76a2d6c0ceccfb9
+
+
+
+
+OLD VERSION
+
+const form = document.querySelector('#searchForm');
+
+form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const searchTerm = form.ELEMENT_NODE.query.value;
+    const config = { params: {q: searchTerm,}}
+    const res = await axios.get(`api.openweathermap.org/data/2.5/weather?q={city name}&appid=3861eeae573a8188b76a2d6c0ceccfb9`, config);
+    form.elements.query.value = '';
+})
+
+
+
+
+
+
+
+const form = document.querySelector('#searchForm');
+
+form.addEventListener('submit', async function (e){
+    e.preventDefault();
+    const searchCity = form.elements.query.value;
+    // const config = { params: {q: searchCity}}
+    const res = await axios.get(`http://api.openweathermap.org/data/2.5/weather?q=${searchCity}&units=metric&appid=3861eeae573a8188b76a2d6c0ceccfb9`);
+    form.elements.query.value = '';
+
+    return res.data.main.temp;
+
+})
+
+
